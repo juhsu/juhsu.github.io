@@ -59,8 +59,8 @@ nav {
 }
 
 .hero-logo-wrap {
-  width: 660px;
-  height: 528px; /* ~80% of width — full circle visible, tagline text cropped */
+  width: min(660px, 90vw);
+  height: calc(min(660px, 90vw) * 0.8);
   overflow: hidden;
   margin: 0 auto 2.5rem;
 }
