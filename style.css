@@ -34,11 +34,16 @@ nav {
 
 .nav-logo {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1;
+  flex-direction: row;
+  align-items: center;
   text-decoration: none;
-  gap: 2px;
+  gap: 0.75rem;
+}
+.nav-logo-img {
+  height: 42px;
+  width: auto;
+  display: block;
+  border-radius: 50%;
 }
 .logo-main {
   font-family: var(--font-heading);
@@ -47,11 +52,12 @@ nav {
   letter-spacing: 0.1em;
   color: var(--white);
 }
-.logo-kanji {
-  font-size: 0.65rem;
-  color: var(--mid);
-  letter-spacing: 0.35em;
-  font-family: serif;
+
+.hero-logo {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
 }
 
 .nav-links {
