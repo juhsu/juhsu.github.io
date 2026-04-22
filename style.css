@@ -4,7 +4,7 @@
 
 :root {
   --red: #cc0000;
-  --dark: #0d0d0d;
+  --dark: #231f20;
   --dark-2: #1a1a1a;
   --dark-3: #242424;
   --gray-bg: #ffffff;
@@ -39,11 +39,16 @@ nav {
   text-decoration: none;
   gap: 0.75rem;
 }
+.nav-logo-wrap {
+  width: 44px;
+  height: 35px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
 .nav-logo-img {
-  height: 42px;
-  width: auto;
+  width: 100%;
+  height: auto;
   display: block;
-  border-radius: 50%;
 }
 .logo-main {
   font-family: var(--font-heading);
@@ -53,11 +58,16 @@ nav {
   color: var(--white);
 }
 
+.hero-logo-wrap {
+  width: 660px;
+  height: 528px; /* ~80% of width — full circle visible, tagline text cropped */
+  overflow: hidden;
+  margin: 0 auto 2.5rem;
+}
 .hero-logo {
-  width: 100px;
+  width: 100%;
   height: auto;
-  border-radius: 50%;
-  margin-bottom: 1.5rem;
+  display: block;
 }
 
 .nav-links {
@@ -131,15 +141,6 @@ nav {
   opacity: 0.35;
 }
 
-.hero-tagline {
-  font-family: var(--font-heading);
-  font-size: clamp(0.85rem, 2vw, 1.05rem);
-  font-weight: 400;
-  color: #666;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 2.5rem;
-}
 
 .btn-primary {
   display: inline-block;
@@ -353,11 +354,6 @@ section { padding: 5rem 2rem; }
   margin-bottom: 0.6rem;
 }
 
-.instructor-years {
-  font-size: 0.85rem;
-  color: #777;
-  margin-bottom: 1.25rem;
-}
 
 .instructor-bio {
   font-size: 0.92rem;
@@ -375,18 +371,30 @@ section { padding: 5rem 2rem; }
 .instructor-achievements li {
   font-size: 0.82rem;
   color: #888;
-  padding: 0.4rem 0;
+  padding: 0.4rem 0 0.4rem 1.2rem;
   border-bottom: 1px solid #2a2a2a;
-  display: flex;
-  gap: 0.6rem;
-  align-items: flex-start;
+  position: relative;
 }
 .instructor-achievements li::before {
-  content: '—';
+  content: '•';
   color: #555;
-  flex-shrink: 0;
+  position: absolute;
+  left: 0;
 }
 .instructor-achievements li:first-child { border-top: 1px solid #2a2a2a; }
+
+.instructor-achievements--sub {
+  margin-top: 0.3rem;
+  padding-left: 1rem;
+  list-style: none;
+}
+.instructor-achievements--sub li {
+  font-size: 0.76rem;
+  color: #666;
+  border: none !important;
+  padding: 0.15rem 0 0.15rem 1.2rem;
+}
+.instructor-achievements--sub li::before { content: '◦'; }
 
 /* ── SCHEDULE ── */
 #schedule { background: var(--dark-2); }
