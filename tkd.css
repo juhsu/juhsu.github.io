@@ -1,0 +1,175 @@
+/* ── TKD PAGE OVERRIDES & ADDITIONS ── */
+
+.tkd-logo-text {
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+
+/* HERO */
+.tkd-hero {
+  background: var(--dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1.5rem 4rem;
+  position: relative;
+}
+
+.tkd-hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--mid);
+  margin-bottom: 1.25rem;
+}
+
+.tkd-hero-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 9vw, 6.5rem);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.tkd-hero-tagline {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  color: var(--mid);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.tkd-awards-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.78rem;
+  color: #aaa;
+  letter-spacing: 0.04em;
+}
+
+.award-divider {
+  color: #444;
+}
+
+/* ABOUT — instructor highlight card */
+.tkd-instructor-highlight {
+  background: #f7f7f7;
+  border-left: 4px solid var(--red);
+  border-radius: 4px;
+  padding: 2rem;
+}
+
+.tkd-instructor-badge {
+  margin-bottom: 1.25rem;
+}
+
+.tkd-instructor-name {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+}
+
+.tkd-instructor-rank {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.tkd-cred-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.tkd-cred-list li {
+  font-size: 0.88rem;
+  color: #555;
+  padding: 0.35rem 0 0.35rem 1.2rem;
+  border-bottom: 1px solid #e8e8e8;
+  position: relative;
+}
+
+.tkd-cred-list li::before {
+  content: '•';
+  color: var(--red);
+  position: absolute;
+  left: 0;
+}
+
+.tkd-cred-list li:first-child { border-top: 1px solid #e8e8e8; }
+
+/* PROGRAMS — 3-col grid */
+.tkd-programs-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 860px) {
+  .tkd-programs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COMMUNITY */
+#community { background: #fff; }
+
+.tkd-community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 680px) {
+  .tkd-community-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tkd-community-card {
+  background: #f7f7f7;
+  border-top: 3px solid var(--red);
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+
+.tkd-community-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.tkd-community-card p {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.65;
+}
+
+.tkd-award-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  padding: 1.25rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  max-width: 560px;
+  margin: 0 auto;
+}
