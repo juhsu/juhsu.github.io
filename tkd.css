@@ -1,5 +1,24 @@
 /* ── TKD PAGE OVERRIDES & ADDITIONS ── */
 
+/* NAV LOGO */
+.tkd-nav-logo-wrap {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.tkd-nav-logo-img {
+  position: absolute;
+  top: 0;
+  left: -23px;
+  height: 47px;
+  width: auto;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
 .tkd-logo-text {
   font-size: 1.1rem;
   letter-spacing: 0.08em;
@@ -7,7 +26,7 @@
 
 /* HERO */
 .tkd-hero {
-  background: var(--dark);
+  background: var(--dark-3);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +35,18 @@
   text-align: center;
   padding: 6rem 1.5rem 4rem;
   position: relative;
+}
+
+.tkd-hero-logo-wrap {
+  width: min(560px, 88vw);
+  margin: 0 auto 1.5rem;
+}
+
+.tkd-hero-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: invert(0.86);
 }
 
 .tkd-hero-eyebrow {
@@ -50,15 +81,35 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.5rem 1.25rem;
+  align-items: center;
+  gap: 1rem;
   margin-bottom: 2.5rem;
-  font-size: 0.78rem;
-  color: #aaa;
-  letter-spacing: 0.04em;
 }
 
-.award-divider {
-  color: #444;
+.award-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.award-badge {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+.award-label {
+  font-size: 0.65rem;
+  color: #888;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .award-badge { height: 68px; }
 }
 
 /* ABOUT — instructor highlight card */
@@ -122,6 +173,216 @@
   .tkd-programs-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.class-card--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.class-card--link:hover {
+  border-color: var(--red);
+  transform: translateY(-3px);
+}
+
+/* CAMP */
+#camp { background: #f7f7f7; }
+
+.camp-layout {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.camp-flyer-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.camp-flyer {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+@media (max-width: 860px) {
+  .camp-layout {
+    grid-template-columns: 1fr;
+  }
+  .camp-flyer-wrap {
+    position: static;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
+
+.camp-intro {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+.camp-day-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #999;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.camp-timeline {
+  max-width: 560px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.camp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 110px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e0e0e0;
+}
+
+.camp-block {
+  display: grid;
+  grid-template-columns: 110px 20px 1fr;
+  align-items: center;
+  gap: 0 1rem;
+  padding: 0.65rem 0;
+  position: relative;
+}
+
+.camp-time {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--red);
+  text-align: right;
+  letter-spacing: 0.04em;
+}
+
+.camp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  border: 2px solid #fff;
+  justify-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.camp-dot--highlight {
+  background: var(--red);
+  width: 14px;
+  height: 14px;
+}
+
+.camp-dot--end {
+  background: var(--dark);
+}
+
+.camp-desc {
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.camp-tag {
+  display: inline-block;
+  background: #ebebeb;
+  color: #666;
+  font-size: 0.72rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+  margin-left: 0.25rem;
+}
+
+.camp-friday-note {
+  text-align: center;
+  margin: 2rem auto 0;
+  font-size: 0.88rem;
+  color: #666;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 0.75rem 1.25rem;
+  max-width: 400px;
+}
+
+.camp-cta {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* SCHEDULE GRAPHIC */
+.tkd-schedule-img-wrap {
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 2.5rem;
+  border-radius: 6px;
+}
+
+.tkd-schedule-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* HOLIDAY CLOSURES */
+.tkd-holidays {
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.tkd-holidays-title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ccc;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tkd-holidays-list {
+  list-style: none;
+  width: 100%;
+}
+
+.tkd-holidays-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: #aaa;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.tkd-holidays-list li:first-child { border-top: 1px solid #2a2a2a; }
+
+.tkd-holidays-list li span:first-child {
+  color: var(--red);
+  font-weight: 600;
+  white-space: nowrap;
+  min-width: 130px;
 }
 
 /* COMMUNITY */
